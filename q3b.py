@@ -9,12 +9,13 @@ def add_binary(a, b):
     def binsum(string):
         suma = 0
         for i in range(len(string)):
-           if string[i]==1:
+           if string[i]=='1':
                suma += 2**(len(string)-1-i)
         return suma
     
     c = binsum(a1) + binsum(b1)
-    return c
+    
+
     
     def maxg(gle):
         a = 0
@@ -24,10 +25,10 @@ def add_binary(a, b):
     
     
     res = ''
-    for i in range(maxg(c),0,-1):
-        if c>= 2**(maxg(c)-i):
+    for i in range(maxg(c),-1,-1):
+        if c>= 2**(i):
             res+= '1'
-            c-=2**(maxg(c)-i)
+            c-=2**(i)
             
         else:
             res +='0'
